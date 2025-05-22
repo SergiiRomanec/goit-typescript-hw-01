@@ -1,13 +1,13 @@
-type Page = {
+interface Page {
   title: string;
   likes: number;
-  accounts: [...string[]];
+  accounts: string[];
   status: "open" | "close";
   details?: {
-    createAt: number | string | Date;
-    updateAt: number | string | Date;
+    createAt: Date;
+    updateAt: Date;
   };
-};
+}
 
 const page1: Page = {
   title: "The awesome page",
